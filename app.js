@@ -21,11 +21,6 @@
   .controller('tagsController', tagsController);
 
 function tagsController() {
-  this.name = "John Smith";
-  this.contacts = [
-    {type: 'phone', value: '408 555 1212'},
-    {type: 'email', value: 'john.smith@example.org'} ];
-    
   this.tagName = "";
   this.tagList = [];
   
