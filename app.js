@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
   
-  angular.module('controllerAsExample', [])
+  angular.module('tagsApp', [])
   .directive('tagsDir', function () {
     return {
         restrict: 'E',
@@ -12,18 +12,15 @@
         link: function($scope, element, attributes){
             $scope.closable = !(typeof attributes.closable === 'undefined');
             $scope.close = function(index){
-                console.log(index);
                 $scope.tags.splice(index,1)
-                //alert(angular.element($event.currentTarget));
-//                element.remove();
             }
                     
         }
   };
 })
-  .controller('SettingsController1', SettingsController1);
+  .controller('tagsController', tagsController);
 
-function SettingsController1() {
+function tagsController() {
   this.name = "John Smith";
   this.contacts = [
     {type: 'phone', value: '408 555 1212'},
